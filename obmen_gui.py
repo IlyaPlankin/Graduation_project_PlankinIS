@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 
 def get_ovcount_from_api(iv, ov, count):
-    apiurl = f'http://192.168.20.46:8080/obmen?val1={iv}&val2={ov}&count={count}'
+    apiurl = f'http://192.168.207.232:8080/obmen?val1={iv}&val2={ov}&count={count}'
     result = requests.get(apiurl)
     result_sring = result.text
     result_elem = window['result']
@@ -86,7 +86,7 @@ while True:
                 start_date = values2[1]
                 end_date = values2[2]
                 result = requests.get(
-                    f'http://192.168.20.46:8080/plot?val={val}&start_date={start_date}&end_date={end_date}')
+                    f'http://192.168.207.232:8080/plot?val={val}&start_date={start_date}&end_date={end_date}')
                 raw_points = result.json()
                 dates = []
                 rates = []

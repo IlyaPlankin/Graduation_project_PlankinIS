@@ -4,7 +4,7 @@ import logging
 import datetime
 import configparser
 import redis
-#http://192.168.20.46:8080/plot?val=USD&start_date=20240610&end_date=20240715
+#http://192.168.207.232:8080/plot?val=USD&start_date=20240610&end_date=20240715
 logging.basicConfig(filename='exchange.log', level=logging.DEBUG)
 def get_valute_rate(connection, cursor, valute):
     if valute == "RUB" or valute == "RUR":
